@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Resume - James J. Hall</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <script async src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBh5P-U9cE9bUhrB5b2ZIBZ7Ocp-UMh-FM&libraries=places"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="main" class="container">
+
+        <!-- BIO PICTURE AND NAME INFORMATION -->
+        <header id="header" class="row">
+            <!-- TODO: 2 header IDs (REMOVE ONE)-->
+            <!-- Logo area - Left Side -->
+            <div class="bioPic-wrapper col-3"></div>
+            <!-- Person area - Right Side -->
+            <div class="person col-9 text-right text-uppercase mt-3"></div>
+        </header>
+
+        <!-- CONTACTS BAR -->
+        <div id="contactsBar" class="row"></div>
+
+        <main class="page">
+
+        <!-- WELCOME MESSAGE -->
+        <div id="welcomeMsg" class="row sect-dkGray">
+            <h4 class="col-12">Who Am I</h4>
+        </div>
+
+        <!-- SKILLS AT A GLANCE -->
+        <section id="skills" class="skills row sect-ltGray">
+            <h4 class="col-12">Skills at a Glance</h4>
+            <ul id="skillList" class="col-12 list-inline list-unstyled"></ul>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section id="workExperience" class="sect-white row">
+            <h3 class="col-12">Work Experience</h3>
+        </section>
+
+        <!-- PROJECTS -->
+        <div id="projects" class="sect-ltGray row">
+            <h3 class="col-12">Projects</h3>
+        </div>
+
+        <!-- EDUCATION -->
+        <div id="education" class="sect-white row">
+            <h3 class="col-12">Education</h3>
+        </div>
+
+        <!-- GOOGLE MAP LOCATIONS OF WORK AND EDUCATION -->
+        <div id="mapDiv" class="sect-ltGray row">
+            <h3 class="col-12">Where I've Lived and Worked</h3>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="letsConnect" class="dark-gray row">
+            <h3 class="col-12 text-center">Let's Connect</h3>
+            <ul id="footerContacts" class="flex-box">
+            </ul>
+        </div>
+        </main>
+    </div><!--bootstrap container-->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <!--<script src="js/jQuery.js"></script>-->
+    <script src="js/helper.js"></script>
+    <script src="js/resumeBuilder.js"></script>
+    <script>
+        if (document.getElementsByClassName('contact').length === 0) {
+            document.getElementById('contacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('welcome-message').length === 0) {
+            document.getElementById('welcomeMsg').style.display = 'none';
+        }
+        if (document.getElementsByClassName('skill-item').length === 0) {
+            document.getElementById('skills').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('contact').length === 0) {
+            document.getElementById('lets-connect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

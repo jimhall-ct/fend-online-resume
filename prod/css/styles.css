@@ -1,0 +1,136 @@
+body {
+  font-family: Lato, Arial, sans-serif;
+  color: #666;
+  background: #333; }
+
+.page {
+  background: #eee; }
+
+.sect-dkGray {
+  color: #888;
+  background: #333; }
+
+.sect-ltGray {
+  color: #777;
+  background: #ddd; }
+
+.sect-white {
+  color: #888;
+  background: #eee; }
+
+header {
+  background: #222;
+  background: linear-gradient(to bottom, #222, #333); }
+
+.bioPic {
+  width: 55px;
+  border-radius: 50%;
+  border: 2px solid #444; }
+
+.person {
+  color: #779;
+  font-weight: 300; }
+
+.name {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: .25rem; }
+
+.role {
+  font-size: 1rem;
+  font-weight: 300; }
+
+#contacts {
+  background: #444;
+  border-bottom: 1px solid #262626;
+  border-top: 1px solid #4e4e4e;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-transform: lowercase; }
+
+.contact {
+  cursor: default;
+  margin: 0.2rem 0.3rem 0.4rem 0.3rem;
+  white-space: nowrap; }
+
+.fa {
+  color: #888; }
+
+.contact-type {
+  color: #888; }
+
+.contact-type:after {
+  content: ": "; }
+
+.contact-value {
+  color: #c2b63d; }
+
+#welcomeMsg {
+  padding: 1rem 0; }
+
+.welcome-message {
+  font-style: italic;
+  font-weight: 300;
+  padding: 1rem 4rem; }
+
+#skills h4 {
+  margin: 1rem 0; }
+
+#skills .skill-item {
+  padding: 0.2em 0.6em;
+  background: #e2e2e2;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  margin: .25em; }
+
+#workExperience h3 {
+  margin: 1rem 0; }
+
+.title-text {
+  color: #444;
+  font-weight: bold; }
+
+.employer-text {
+  color: #666; }
+
+.date-text {
+  font-size: 0.85rem; }
+
+.location-text {
+  font-size: 0.85rem; }
+
+#projects h3 {
+  margin: 1rem 0; }
+
+footer {
+  font-size: .85rem;
+  color: #888;
+  background: #222;
+  border-top: 2px solid #888; }
+
+@media (min-width: 576px) {
+  .bioPic {
+    width: 65px; }
+  .name {
+    font-size: 2rem; }
+  .role {
+    font-size: 1.15rem; } }
+
+@media (min-width: 768px) {
+  .bioPic {
+    width: 80px; }
+  .name {
+    font-size: 2.25rem; }
+  .role {
+    font-size: 1.3rem; } }
+
+@media (min-width: 992px) {
+  .bioPic {
+    width: 100px; }
+  .name {
+    font-size: 3rem; }
+  .role {
+    font-size: 1.5rem; }
+  .work-entry {
+    max-width: 750px; } }
