@@ -23,7 +23,7 @@ $color-person-name: $color-lightGray3;
 $color-person-title: $color-lightGray4;
 
 $color-body-bg: #3c3c3c;
-$color-body-fg: #7d7d7d;
+$color-body-text: #666;
 $color-page-border: #444;
 $color-section-dkGray: #333;
 $color-section-mdGray: #ebebeb;
@@ -34,7 +34,13 @@ $color-person-name: #adadd9;
 $color-person-role: #adadd9;
 $color-person-biopic-border: #adadd9;
 
+
+$color-contact-bg: #444;
+$color-contact-borderBottom: #262626;
+$color-contact-borderTop: #4e4e4e;
 $color-contact-value: #bfae60;
+
+$color-message-fg: #777;
 
 // Media Query Breakpoints
 $bp-xs: 360px;
@@ -62,7 +68,7 @@ $bp-xl: 1200px;
  * -  7:PROJECTS
  * -  8:EDUCATION
  * -  9:GOOGLE MAP
- * - 10:FOOTER
+ * - 10:LET'S CONNECT
  *
  * - MEDIA QUERIES
  */
@@ -73,8 +79,9 @@ $bp-xl: 1200px;
 
 body {
     background: $color-body-bg;
-    color: $color-body-fg;
+    color: $color-body-text;
     font-family: $font-primary;
+    font-weight: 300;
 }
 
 .page {
@@ -91,6 +98,11 @@ body {
 
 .sect-ltGray {
     background: $color-section-ltGray;
+}
+
+h3, h4 {
+    font-size: 1.75rem;
+    margin: 1rem 0;
 }
 
 /************************************************
@@ -125,24 +137,17 @@ header {
  * 1:CONTACTS BAR STYLES
  ************************************************/
 #contacts {
-    background: #444;
-    border-bottom: 1px solid #262626;
-    border-top: 1px solid #4e4e4e;
+    background: $color-contact-bg;
+    border-bottom: 1px solid $color-contact-borderBottom;
+    border-top: 1px solid $color-contact-borderTop;
     font-size: 0.9rem;
-    font-weight: 300;
     margin-bottom: 0;
     text-transform: lowercase;
 }
 
 .contact {
-    cursor: default;
-    margin: 0.2rem 0.3rem 0.4rem 0.3rem;
+    margin: 0.2rem 0.35rem 0.4rem 0.35rem;
     white-space: nowrap;
-    //background: blue;
-}
-
-.fa {
-    color: $color-lightGray4;
 }
 
 .contact-type:after {
@@ -157,83 +162,76 @@ header {
  * 1:WELCOME MESSAGE STYLES
  ************************************************/
 .welcome-message {
+    color: $color-message-fg;
     font-style: italic;
-    font-weight: 300;
     padding: 1.5rem;
 }
 
 /************************************************
  * 1:SKILLS AT A GLANCE STYLES
  ************************************************/
-#skills h4 {
-    margin: 1rem 0;
-}
+//#skills h4 {
+//    margin: 1rem 0;
+//}
 
-#skills .skill-item {
-    padding: 0.2em 0.6em;
-    background: #e2e2e2;
-    border: 1px solid #d3d3d3;
+.skill-item {
+    background: lighten($color-section-mdGray, 2);
+    border: 1px solid darken($color-section-mdGray, 10);
     border-radius: 4px;
     margin: .25em;
+    padding: 0.2em 0.6em;
 }
 
 /************************************************
  * 1:WORK EXPERIENCE STYLES
  ************************************************/
-#workExperience h3 {
-    margin: 1rem 0;
-}
-
-
-
 .title-text {
-    color: #444;
-    font-weight: bold;
+    color: darken($color-body-text, 30);
+    font-weight: normal;
 }
 
 .employer-text {
-    color: #666;
+    font-weight: normal;
 }
 
-.date-text {
-    font-size: 0.85rem;
-    //font-weight: 300;
+.date-text, .location-text {
+    font-size: 0.9rem;
 }
 
-.location-text {
-    font-size: 0.85rem;
-    //font-weight: 300;
+.description {
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
 }
 
 /************************************************
  * 1:PROJECTS STYLES
  ************************************************/
-#projects h3 {
-    margin: 1rem 0;
-}
-
 #projects {
     padding-bottom: 1rem;
+}
+
+.project-title {
+    font-weight: normal;
 }
 
 /************************************************
  * 1:EDUCATION STYLES
  ************************************************/
-#education h3 {
-    margin: 1rem 0;
-}
-
 #education h4 {
     font-size: 1.25rem;
-    margin: 0.5rem 0;
+}
+
+.school-text {
+    font-weight: normal;
 }
 
 .online-title {
-    color: #666;
+    color: $color-body-text;
+    font-weight: normal;
 }
 
 .online-date, .online-school {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
 .online-school {
@@ -252,23 +250,30 @@ header {
 }
 
 /************************************************
- * 1:FOOTER STYLES
+ * 1:LET'S CONNECT STYLES
  ************************************************/
-#letsConnect h3 {
-    margin: 1rem 0;
-}
 
-footer {
-    font-size: .85rem;
-    color: $color-lightGray4;
-    background: $color-footer-bg;
-    border-top: 2px solid $color-lightGray4;
-}
+/*
+ * MEDIA QUERIES
+ *
+ * BOOTSTRAP BREAKPOINTS
+ * xs 360px
+ * sm 576px
+ * md 768px
+ * lg 992px
+ * xl 1200px
+ */
 
+/************************************************
+ * BOOTSTRAP BREAKPOINT - xs
+ ************************************************/
 @media (min-width: $bp-xs ) {
 
 }
 
+/************************************************
+ * BOOTSTRAP BREAKPOINT - sm
+ ************************************************/
 @media (min-width: $bp-sm ) {
     .bioPic {
         width: 65px;
@@ -283,6 +288,9 @@ footer {
     }
 }
 
+/************************************************
+ * BOOTSTRAP BREAKPOINT - md
+ ************************************************/
 @media (min-width: $bp-md ) {
     .bioPic {
         width: 80px;
@@ -297,6 +305,9 @@ footer {
     }
 }
 
+/************************************************
+ * BOOTSTRAP BREAKPOINT - lg
+ ************************************************/
 @media (min-width: $bp-lg ) {
     .bioPic {
         width: 100px;
@@ -315,6 +326,9 @@ footer {
     }
 }
 
+/************************************************
+ * BOOTSTRAP BREAKPOINT - xl
+ ************************************************/
 @media (min-width: $bp-xl ) {
 
 }

@@ -19,16 +19,16 @@ var HTMLworkTitle = '<div class="title-text">%data%</div>';
 var HTMLworkEmployer = '<div class="employer-text">%data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkDescription = '<p class="description">%data%</p>';
 
 var HTMLprojectStart = '<div class="col-12 project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a class="project-title" href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p>%data%</p>';
+var HTMLprojectDescription = '<p class="description">%data%</p>';
 var HTMLprojectImage = '<img class="col-md-4 img-fluid p-1" src="%data%">';
 
 var HTMLschoolStart = '<div class="col-12 education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%</a>';
+var HTMLschoolName = '<a class="school-text" href="#">%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<div>Major: %data%';
