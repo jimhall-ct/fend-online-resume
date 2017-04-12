@@ -8,7 +8,7 @@ var bio = {
         github: "jimhall-ct",
         location: "Monroe, CT"
     },
-    welcomeMsg: "As a person who loves all things technology. Being a web developer seems less like a job and more of a labor of love. One thing is for sure. The web has a long way to go and is continually moving in new directions. Keeping up with the vast amount of skills required can be challenging but I wouldn't have it any other way.",
+    welcomeMessage: "As a person who loves all things technology. Being a web developer seems less like a job and more of a labor of love. One thing is for sure. The web has a long way to go and is continually moving in new directions. Keeping up with the vast amount of skills required can be challenging but I wouldn't have it any other way.",
     skills: [
         "HTML",
         "CSS",
@@ -146,9 +146,9 @@ bio.display = function () {
     }
 
     // Welcome Message
-    if (bio.welcomeMsg) {
-        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-        $('#welcomeMsg').append(formattedWelcomeMsg);
+    if (bio.welcomeMessage) {
+        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        $('#welcomeMessage').append(formattedWelcomeMsg);
     }
 }; //bio.display()
 work.display = function () {

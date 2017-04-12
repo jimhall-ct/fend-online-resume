@@ -163,9 +163,9 @@ bio.display = function () {
     }
 
     // Welcome Message
-    if (bio.welcomeMsg) {
-        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-        $('#welcomeMsg').append(formattedWelcomeMsg);
+    if (bio.welcomeMessage) {
+        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        $('#welcomeMessage').append(formattedWelcomeMsg);
     }
 }; //bio.display()
 work.display = function () {
