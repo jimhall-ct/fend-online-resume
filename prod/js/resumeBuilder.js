@@ -50,7 +50,7 @@ var work = {
             title: "Partner, System Architect, Programmer",
             location: "Norwalk, Connecticut",
             dates: "Mar 2001 - Jul 2007",
-            description: "Design, build, and maintain large company website using php and mysql. Design and architect large smart home systems. Program AMX control systems, writing all code from scratch to control, integrate, and communicate with 3rd party systems. Systems installed and integrated included: ip network, whole house audio/video, lighting system, phone system, alarm and surveillance systems, hvac, and pool/jacuzzi system. Also designed and programmed AMX touchscreen user interfaces."
+            description: "Design, build, and maintain large company website using php and mysql. Design and architect entire smart home systems. Program AMX control systems, writing all code from scratch to control, integrate, and communicate with 3rd party systems. Systems installed and integrated included: ip network, whole house audio/video, lighting system, phone system, alarm and surveillance systems, hvac, and pool/jacuzzi system. Also designed and programmed AMX touchscreen user interfaces."
         },
         {
             employer: "Microcast",
@@ -126,7 +126,7 @@ bio.display = function () {
 
     if (bio.contacts) {
         $('#contactsBar').append(HTMLcontactsStart);
-        var topContacts = $('#contacts');
+        var topContacts = $('.contacts');
         // Contacts - Mobile
         if (bio.contacts.mobile) {
             var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);

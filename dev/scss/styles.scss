@@ -2,44 +2,20 @@
 $font-primary: Lato, Arial, sans-serif;
 
 // Color Palette
-$color-yellow: #efdb10;
-$color-orange: #e69b50;
-$color-lightGray1: #eee;
-$color-lightGray2: #aaa;
-$color-lightGray3: #bbb;
-$color-lightGray4: #888;
-$color-darkGray1: #111;
-$color-darkGray2: #222;
-$color-darkGray3: #333;
-$color-darkGray4: #444;
-
-// Color assignments ere
-$color-text: $color-darkGray1;
-$color-body-bg: $color-darkGray3;
-$color-page-bg: $color-lightGray1;
-$color-header-bg: $color-darkGray2;
-$color-footer-bg: $color-darkGray2;
-$color-person-name: $color-lightGray3;
-$color-person-title: $color-lightGray4;
-
 $color-body-bg: #3c3c3c;
 $color-body-text: #666;
 $color-page-border: #444;
 $color-section-dkGray: #333;
 $color-section-mdGray: #ebebeb;
 $color-section-ltGray: #f5f5f5;
-$color-header-gradient-top: #222;
-
+$color-header-gradient-top: #1e1e1e;
 $color-person-name: #adadd9;
 $color-person-role: #adadd9;
 $color-person-biopic-border: #adadd9;
-
-
 $color-contact-bg: #444;
 $color-contact-borderBottom: #262626;
 $color-contact-borderTop: #4e4e4e;
 $color-contact-value: #bfae60;
-
 $color-message-fg: #777;
 
 // Media Query Breakpoints
@@ -48,10 +24,6 @@ $bp-sm: 576px;
 $bp-md: 768px;
 $bp-lg: 992px;
 $bp-xl: 1200px;
-
-//* {
-//    outline: 1px dashed blue;
-//}
 
 /*
  * MOBILE FIRST CSS
@@ -86,6 +58,7 @@ body {
 
 .page {
     border: 1px solid $color-page-border;
+    margin-bottom: 20px;
 }
 
 .sect-dkGray {
@@ -131,12 +104,13 @@ header {
 .role {
     font-size: 1rem;
     font-weight: 300;
+    margin: 0;
 }
 
 /************************************************
  * 1:CONTACTS BAR STYLES
  ************************************************/
-#contacts {
+.contacts {
     background: $color-contact-bg;
     border-bottom: 1px solid $color-contact-borderBottom;
     border-top: 1px solid $color-contact-borderTop;
@@ -185,6 +159,10 @@ header {
 /************************************************
  * 1:WORK EXPERIENCE STYLES
  ************************************************/
+.work-entry {
+    max-width: 750px;
+}
+
 .title-text {
     color: darken($color-body-text, 30);
     font-weight: normal;
@@ -241,17 +219,19 @@ header {
 /************************************************
  * 1:GOOGLE MAP STYLES
  ************************************************/
-#mapDiv h3 {
-    margin: 1rem 0;
-}
-
 #map {
     height: 300px;
+    height: 75vh;
+    max-height: 600px;
+    width: 100%;
 }
 
 /************************************************
  * 1:LET'S CONNECT STYLES
  ************************************************/
+#letsConnect {
+    background: $color-section-dkGray;
+}
 
 /*
  * MEDIA QUERIES
@@ -265,16 +245,9 @@ header {
  */
 
 /************************************************
- * BOOTSTRAP BREAKPOINT - xs
- ************************************************/
-@media (min-width: $bp-xs ) {
-
-}
-
-/************************************************
  * BOOTSTRAP BREAKPOINT - sm
  ************************************************/
-@media (min-width: $bp-sm ) {
+@media (min-width: $bp-sm) {
     .bioPic {
         width: 65px;
     }
@@ -286,12 +259,16 @@ header {
     .role {
         font-size: 1.15rem;
     }
+
+    .welcome-message {
+        padding: 2rem;
+    }
 }
 
 /************************************************
  * BOOTSTRAP BREAKPOINT - md
  ************************************************/
-@media (min-width: $bp-md ) {
+@media (min-width: $bp-md) {
     .bioPic {
         width: 80px;
     }
@@ -303,12 +280,16 @@ header {
     .role {
         font-size: 1.3rem;
     }
+
+    .welcome-message {
+        padding: 2rem 4rem;
+    }
 }
 
 /************************************************
  * BOOTSTRAP BREAKPOINT - lg
  ************************************************/
-@media (min-width: $bp-lg ) {
+@media (min-width: $bp-lg) {
     .bioPic {
         width: 100px;
     }
@@ -321,15 +302,11 @@ header {
         font-size: 1.5rem;
     }
 
+    .welcome-message {
+        padding: 2.5rem 4rem;
+    }
+
     .work-entry {
         max-width: 750px;
     }
 }
-
-/************************************************
- * BOOTSTRAP BREAKPOINT - xl
- ************************************************/
-@media (min-width: $bp-xl ) {
-
-}
-
