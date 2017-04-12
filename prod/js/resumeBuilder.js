@@ -8,7 +8,7 @@ var bio = {
         github: "jimhall-ct",
         location: "Monroe, CT"
     },
-    welcomeMsg: "As someone who enjoys working with modern technology in many forms, web design and development allows me the freedom to be creative and technical at the same time. It is without a doubt a challenging field as the need to continually learn and grow is paramount for success. While many of the web technologies have matured, they still remain a fast moving target.",
+    welcomeMsg: "As someone who enjoys working with modern technology in many forms, web development allows me the freedom to be creative and technical at the same time. The web remains a fast moving target and it can be challenging to keep up, but this is what keeps it exciting and rewarding.",
     skills: [
         "HTML",
         "CSS",

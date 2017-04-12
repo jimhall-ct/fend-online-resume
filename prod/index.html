@@ -21,7 +21,6 @@
 
     <!-- BIO PICTURE AND NAME INFORMATION -->
     <header id="header" class="row">
-        <!-- TODO: 2 header IDs (REMOVE ONE)-->
         <!-- Logo area - Left Side -->
         <div class="bioPic-wrapper col-3"></div>
         <!-- Person area - Right Side -->
@@ -37,33 +36,33 @@
     </div>
 
     <!-- SKILLS AT A GLANCE -->
-    <section id="skills" class="skills row sect-ltGray">
+    <section id="skills" class="skills row sect-mdGray">
         <h4 class="col-12">Skills at a Glance</h4>
         <ul id="skillList" class="col-12 list-inline list-unstyled"></ul>
     </section>
 
     <!-- WORK EXPERIENCE -->
-    <section id="workExperience" class="sect-white row">
+    <section id="workExperience" class="sect-ltGray row">
         <h3 class="col-12">Work Experience</h3>
     </section>
 
     <!-- PROJECTS -->
-    <div id="projects" class="sect-ltGray row">
+    <div id="projects" class="sect-mdGray row">
         <h3 class="col-12">Projects</h3>
     </div>
 
     <!-- EDUCATION -->
-    <div id="education" class="sect-white row">
+    <div id="education" class="sect-ltGray row">
         <h3 class="col-12">Education</h3>
     </div>
 
     <!-- GOOGLE MAP LOCATIONS OF WORK AND EDUCATION -->
-    <div id="mapDiv" class="sect-ltGray row">
+    <div id="mapDiv" class="sect-mdGray row">
         <h3 class="col-12">Where I've Lived and Worked</h3>
     </div>
 
     <!-- FOOTER -->
-    <div id="letsConnect" class="dark-gray row">
+    <div id="letsConnect" class="sect-dkgray row">
         <h3 class="col-12 text-center">Let's Connect</h3>
         <ul id="footerContacts" class="flex-box">
         </ul>
@@ -78,11 +77,11 @@
 <script src="js/helper.js"></script>
 <script src="js/resumeBuilder.js"></script>
 <script>
-    if (document.getElementsByClassName('contact').length === 0) {
-        document.getElementById('contacts').style.display = 'none';
-    }
     if (document.getElementsByTagName('h1').length === 0) {
         document.getElementById('header').style.display = 'none';
+    }
+    if (document.getElementsByClassName('contact').length === 0) {
+        document.getElementById('contacts').style.display = 'none';
     }
     if (document.getElementsByClassName('welcome-message').length === 0) {
         document.getElementById('welcomeMsg').style.display = 'none';
