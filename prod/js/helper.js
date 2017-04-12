@@ -28,41 +28,42 @@ var HTMLprojectDescription = '<p class="description">%data%</p>';
 var HTMLprojectImage = '<img class="col-md-4 img-fluid p-1" src="%data%">';
 
 var HTMLschoolStart = '<div class="col-12 education-entry"></div>';
-var HTMLschoolName = '<a class="school-text" href="#">%data%</a>';
+var HTMLschoolURL = '<a class="school-text" href="%data%">';
+var HTMLschoolName = '%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<div>Major: %data%';
-var HTMLschoolDegree = ' -- %data%</div>';
+var HTMLschoolDegree = ' - %data%</div>';
 
 var HTMLonlineClasses = '<h4 class="col-12">Online Classes</h4>';
 var HTMLonlineTitle = '<div class="online-title">%data%</div>';
-var HTMLonlineDates = '<div class="online-date">%data%</div>';
-var HTMLonlineURL = '<div class="online-school"><a href="%data%">';
-var HTMLonlineSchool = '%data%</a></div>';
+var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineURL = '<a class="online-school" href="%data%">';
+var HTMLonlineSchool = '%data%</a>';
 
 var googleMap = '<div id="map" class="col-12"></div>';
-
 var map; // declares a global map variable
 
 function initializeMap() {
 
     var locations;
+    var infoWindow;
 
     var mapOptions = {
         disableDefaultUI: true
     };
 
-    /*
-     For the map to be displayed, the googleMap var must be
-     appended to #mapDiv in resumeBuilder.js.
-     */
+  /*
+   For the map to be displayed, the googleMap var must be
+   appended to #mapDiv in resumeBuilder.js.
+   */
     map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
-    /*
-     locationFinder() returns an array of every location string from the JSONs
-     written for bio, education, and work.
-     */
+  /*
+   locationFinder() returns an array of every location string from the JSONs
+   written for bio, education, and work.
+   */
     function locationFinder() {
 
         // initializes an empty array
@@ -75,7 +76,7 @@ function initializeMap() {
         // the locations array. Note that forEach is used for array iteration
         // as described in the Udacity FEND Style Guide:
         // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-        education.schools.forEach(function (school) {
+        education.schools.forEach(function(school) {
             locations.push(school.location);
         });
 
@@ -83,18 +84,18 @@ function initializeMap() {
         // the locations array. Note that forEach is used for array iteration
         // as described in the Udacity FEND Style Guide:
         // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-        work.jobs.forEach(function (job) {
+        work.jobs.forEach(function(job) {
             locations.push(job.location);
         });
 
         return locations;
     }
 
-    /*
-     createMapMarker(placeData) reads Google Places search results to create map pins.
-     placeData is the object returned from search results containing information
-     about a single location.
-     */
+  /*
+   createMapMarker(placeData) reads Google Places search results to create map pins.
+   placeData is the object returned from search results containing information
+   about a single location.
+   */
     function createMapMarker(placeData) {
 
         // The next lines save location data from the search result object to local variables
@@ -110,16 +111,16 @@ function initializeMap() {
             title: name
         });
 
+
         // infoWindows are the little helper windows that open when you click
         // or hover over a pin on a map. They usually contain more information
         // about a location.
-        var infoWindow = new google.maps.InfoWindow({
-            content: name
-        });
+        infoWindow = new google.maps.InfoWindow();
 
         // hmmmm, I wonder what this is about...
-        google.maps.event.addListener(marker, 'click', function () {
-            // your code goes here!
+        google.maps.event.addListener(marker, 'click', function() {
+            infoWindow.setContent(name);
+            infoWindow.open(map, marker);
         });
 
         // this is where the pin actually gets added to the map.
@@ -130,21 +131,20 @@ function initializeMap() {
         // center the map
         map.setCenter(bounds.getCenter());
     }
-
-    /*
-     callback(results, status) makes sure the search returned results for a location.
-     If so, it creates a new map marker for that location.
-     */
+  /*
+   callback(results, status) makes sure the search returned results for a location.
+   If so, it creates a new map marker for that location.
+   */
     function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             createMapMarker(results[0]);
         }
     }
 
-    /*
-     pinPoster(locations) takes in the array of locations created by locationFinder()
-     and fires off Google place searches for each location
-     */
+  /*
+   pinPoster(locations) takes in the array of locations created by locationFinder()
+   and fires off Google place searches for each location
+   */
     function pinPoster(locations) {
 
         // creates a Google place search service object. PlacesService does the work of
@@ -152,7 +152,7 @@ function initializeMap() {
         var service = new google.maps.places.PlacesService(map);
 
         // Iterates through the array of locations, creates a search object for each location
-        locations.forEach(function (place) {
+        locations.forEach(function(place) {
             // the search request object
             var request = {
                 query: place
@@ -179,7 +179,7 @@ function initializeMap() {
 window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-window.addEventListener('resize', function (e) {
+window.addEventListener('resize', function(e) {
     // Make sure the map bounds get updated on page resize
     map.fitBounds(mapBounds);
 });

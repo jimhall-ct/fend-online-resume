@@ -8,7 +8,7 @@ var bio = {
         github: "jimhall-ct",
         location: "Monroe, CT"
     },
-    welcomeMsg: "As someone who enjoys working with modern technology in many forms, web development allows me the freedom to be creative and technical at the same time. The web remains a fast moving target and it can be challenging to keep up, but this is what keeps it exciting and rewarding.",
+    welcomeMessage: "As someone who enjoys working with modern technology in many forms, web development allows me the freedom to be creative and technical at the same time. The web remains a fast moving target and it can be challenging to keep up, but this is what keeps it exciting and rewarding.",
     skills: [
         "HTML",
         "CSS",
@@ -62,28 +62,33 @@ var work = {
     ]
 }; //work
 var projects = {
-    projects: [{
-        title: "Amazon.com",
-        dates: "Nov 2016 - Current",
-        description: "Redesigned and developed most of Amazon's website using responsive design techniques learned at udacity.com",
-        images: [
-            "img/amazon1_360.png",
-            "img/amazon2_360.png",
-            "img/amazon3_360.png"
-        ]
-    }]
+    projects: [
+        {
+            title: "Amazon.com",
+            dates: "Nov 2016 - Current",
+            description: "Redesigned and developed most of Amazon's website using responsive design techniques learned at udacity.com",
+            images: [
+                "img/amazon1_360.png",
+                "img/amazon2_360.png",
+                "img/amazon3_360.png"
+            ]
+        }
+    ]
 }; //projects
 var education = {
-    schools: [{
-        name: "Southern Connecticut State University",
-        location: "New Haven, Connecticut",
-        degree: "BS",
-        majors: [
-            "Computer Science"
-        ],
-        dates: "1990-1995"
-    }],
-    onlineClasses: [
+    schools: [
+        {
+            name: "Southern Connecticut State University",
+            location: "New Haven, Connecticut",
+            degree: "BS",
+            majors: [
+                "Computer Science"
+            ],
+            dates: "1990-1995",
+            url: "https://www.southernct.edu/"
+        }
+    ],
+    onlineCourses: [
         {
             title: "Web (93 certificates)",
             school: "Lynda.com",
@@ -165,7 +170,7 @@ bio.display = function () {
     // Welcome Message
     if (bio.welcomeMessage) {
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-        $('#welcomeMessage').append(formattedWelcomeMsg);
+        $('#welcomeMsg').append(formattedWelcomeMsg);
     }
 }; //bio.display()
 work.display = function () {
@@ -210,9 +215,10 @@ education.display = function () {
     // Traditional Education
     education.schools.forEach(function (school) {
         var educationEntry = $(HTMLschoolStart);
-        // School Name
+        // School Name & Link
         var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
-        educationEntry.append(formattedSchoolName);
+        var formattedSchoolURL = HTMLschoolURL.replace("%data%", school.url);
+        educationEntry.append(formattedSchoolURL + formattedSchoolName);
         // School Dates
         var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
         educationEntry.append(formattedSchoolDates);
@@ -231,20 +237,20 @@ education.display = function () {
     });
 
     // Online Classes
-    if (education.onlineClasses.length > 0) {
+    if (education.onlineCourses.length > 0) {
         $("#education").append(HTMLonlineClasses);
     }
-    education.onlineClasses.forEach(function (onlineClass) {
+    education.onlineCourses.forEach(function (onlineCourse) {
         educationEntry = $(HTMLschoolStart);
         // Course Title
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineClass.title);
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
         educationEntry.append(formattedOnlineTitle);
         // Course Dates
-        var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineClass.dates);
+        var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
         educationEntry.append(formattedOnlineDates);
         // Course School
-        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineClass.school);
-        var formattedOnlineUrl = HTMLonlineURL.replace("%data%", onlineClass.url);
+        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
+        var formattedOnlineUrl = HTMLonlineURL.replace("%data%", onlineCourse.url);
         // School URL
         educationEntry.append(formattedOnlineUrl + formattedOnlineSchool);
         $("#education").append(educationEntry);

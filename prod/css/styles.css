@@ -21,153 +21,184 @@
  * 1:GLOBAL STYLES
  ************************************************/
 body {
-  background: #3c3c3c;
-  color: #666;
-  font-family: Lato, Arial, sans-serif;
-  font-weight: 300; }
+    background: #3c3c3c;
+    color: #666;
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 300;
+}
 
 .page {
-  border: 1px solid #444;
-  margin-bottom: 20px; }
+    border: 1px solid #444;
+    margin-bottom: 20px;
+}
 
 .sect-dkGray {
-  background: #333; }
+    background: #333;
+}
 
 .sect-mdGray {
-  background: #ebebeb; }
+    background: #ebebeb;
+}
 
 .sect-ltGray {
-  background: #f5f5f5; }
+    background: #f5f5f5;
+}
 
 h3, h4 {
-  font-size: 1.75rem;
-  margin: 1rem 0; }
+    font-size: 1.75rem;
+    margin: 1rem 0;
+}
 
 /************************************************
  * 1:HEADER STYLES
  ************************************************/
 header {
-  background: linear-gradient(to bottom, #1e1e1e, #333); }
+    background: linear-gradient(to bottom, #1e1e1e, #333);
+}
 
 .bioPic {
-  border: 2px solid #adadd9;
-  border-radius: 50%;
-  width: 55px; }
+    border: 2px solid #adadd9;
+    border-radius: 50%;
+    width: 55px;
+}
 
 .person {
-  color: #adadd9; }
+    color: #adadd9;
+}
 
 .name {
-  font-size: 1.75rem;
-  font-weight: 300;
-  margin-bottom: .25rem; }
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: .25rem;
+}
 
 .role {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 0; }
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+}
 
 /************************************************
  * 1:CONTACTS BAR STYLES
  ************************************************/
 .contacts {
-  background: #444;
-  border-bottom: 1px solid #262626;
-  border-top: 1px solid #4e4e4e;
-  font-size: 0.9rem;
-  margin-bottom: 0;
-  text-transform: lowercase; }
+    background: #444;
+    border-bottom: 1px solid #262626;
+    border-top: 1px solid #4e4e4e;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    text-transform: lowercase;
+}
 
 .contact {
-  margin: 0.2rem 0.35rem 0.4rem 0.35rem;
-  white-space: nowrap; }
+    margin: 0.2rem 0.35rem 0.4rem 0.35rem;
+    white-space: nowrap;
+}
 
 .contact-type:after {
-  content: ": "; }
+    content: ": ";
+}
 
 .contact-value {
-  color: #bfae60; }
+    color: #bfae60;
+}
 
 /************************************************
  * 1:WELCOME MESSAGE STYLES
  ************************************************/
 .welcome-message {
-  color: #777;
-  font-style: italic;
-  padding: 1.5rem; }
+    color: #777;
+    font-style: italic;
+    padding: 1.5rem;
+}
 
 /************************************************
  * 1:SKILLS AT A GLANCE STYLES
  ************************************************/
 .skill-item {
-  background: #f0f0f0;
-  border: 1px solid #d2d1d1;
-  border-radius: 4px;
-  margin: .25em;
-  padding: 0.2em 0.6em; }
+    background: #f0f0f0;
+    border: 1px solid #d2d1d1;
+    border-radius: 4px;
+    margin: .25em;
+    padding: 0.2em 0.6em;
+}
 
 /************************************************
  * 1:WORK EXPERIENCE STYLES
  ************************************************/
 .work-entry {
-  max-width: 750px; }
+    max-width: 750px;
+}
 
 .title-text {
-  color: #1a1919;
-  font-weight: normal; }
+    color: #1a1919;
+    font-weight: normal;
+}
 
 .employer-text {
-  font-weight: normal; }
+    font-weight: normal;
+}
 
 .date-text, .location-text {
-  font-size: 0.9rem; }
+    font-size: 0.9rem;
+}
 
 .description {
-  margin-bottom: 1rem;
-  margin-top: 0.25rem; }
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+}
 
 /************************************************
  * 1:PROJECTS STYLES
  ************************************************/
 #projects {
-  padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+}
 
 .project-title {
-  font-weight: normal; }
+    font-weight: normal;
+}
 
 /************************************************
  * 1:EDUCATION STYLES
  ************************************************/
 #education h4 {
-  font-size: 1.25rem; }
+    font-size: 1.25rem;
+}
 
 .school-text {
-  font-weight: normal; }
+    font-weight: normal;
+}
 
 .online-title {
-  color: #666;
-  font-weight: normal; }
+    color: #666;
+    font-weight: normal;
+}
 
 .online-date, .online-school {
-  font-size: 0.9rem; }
+    font-size: 0.9rem;
+}
 
 .online-school {
-  margin-bottom: 0.5rem; }
+    margin-bottom: 1.5rem;
+}
 
 /************************************************
  * 1:GOOGLE MAP STYLES
  ************************************************/
 #map {
-  height: 300px;
-  height: 75vh;
-  max-height: 600px;
-  width: 100%; }
+    height: 300px;
+    height: 75vh;
+    max-height: 600px;
+    width: 100%;
+}
 
 /************************************************
  * 1:LET'S CONNECT STYLES
  ************************************************/
 #letsConnect {
-  background: #333; }
+    background: #333;
+}
 
 /*
  * MEDIA QUERIES
@@ -183,37 +214,61 @@ header {
  * BOOTSTRAP BREAKPOINT - sm
  ************************************************/
 @media (min-width: 576px) {
-  .bioPic {
-    width: 65px; }
-  .name {
-    font-size: 2rem; }
-  .role {
-    font-size: 1.15rem; }
-  .welcome-message {
-    padding: 2rem; } }
+    .bioPic {
+        width: 65px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .role {
+        font-size: 1.15rem;
+    }
+
+    .welcome-message {
+        padding: 2rem;
+    }
+}
 
 /************************************************
  * BOOTSTRAP BREAKPOINT - md
  ************************************************/
 @media (min-width: 768px) {
-  .bioPic {
-    width: 80px; }
-  .name {
-    font-size: 2.25rem; }
-  .role {
-    font-size: 1.3rem; }
-  .welcome-message {
-    padding: 2rem 4rem; } }
+    .bioPic {
+        width: 80px;
+    }
+
+    .name {
+        font-size: 2.25rem;
+    }
+
+    .role {
+        font-size: 1.3rem;
+    }
+
+    .welcome-message {
+        padding: 2rem 4rem;
+    }
+}
 
 /************************************************
  * BOOTSTRAP BREAKPOINT - lg
  ************************************************/
 @media (min-width: 992px) {
-  .bioPic {
-    width: 100px; }
-  .name {
-    font-size: 3rem; }
-  .role {
-    font-size: 1.5rem; }
-  .welcome-message {
-    padding: 2.5rem 4rem; } }
+    .bioPic {
+        width: 100px;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .role {
+        font-size: 1.5rem;
+    }
+
+    .welcome-message {
+        padding: 2.5rem 4rem;
+    }
+}

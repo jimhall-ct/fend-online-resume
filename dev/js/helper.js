@@ -3,7 +3,7 @@ var HTMLbioPic = '<img src="%data%" class="bioPic my-3">';
 var HTMLheaderName = '<h1 class="name">%data%</h1>';
 var HTMLheaderRole = '<h4 class="role">%data%</h4>';
 
-var HTMLcontactsStart = '<ul id="contacts" class="col-12 list-inline list-unstyled d-flex justify-content-between flex-wrap flex-md-row"></ul>';
+var HTMLcontactsStart = '<ul class="contacts col-12 list-inline list-unstyled d-flex justify-content-between flex-wrap flex-md-row"></ul>';
 var HTMLmobile = '<li class="list-inline-item contact" title="mobile phone"><i class="fa fa-phone mr-1 hidden-lg-up" aria-hidden="true"></i><span class="contact-type hidden-md-down">mobile</span><span class="contact-value">%data%</span></li>';
 var HTMLemail = '<li class="list-inline-item contact" title="email"><i class="fa fa-envelope mr-1 hidden-lg-up" aria-hidden="true"></i><span class="contact-type hidden-md-down">email</span><span class="contact-value">%data%</span></li>';
 var HTMLtwitter = '<li class="list-inline-item contact" title="twitter"><i class="fa fa-twitter mr-1 hidden-lg-up" aria-hidden="true"></i><span class="contact-type hidden-md-down">twitter</span><span class="contact-value">%data%</span></li>';
@@ -19,33 +19,35 @@ var HTMLworkTitle = '<div class="title-text">%data%</div>';
 var HTMLworkEmployer = '<div class="employer-text">%data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkDescription = '<p class="description">%data%</p>';
 
 var HTMLprojectStart = '<div class="col-12 project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a class="project-title" href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p>%data%</p>';
+var HTMLprojectDescription = '<p class="description">%data%</p>';
 var HTMLprojectImage = '<img class="col-md-4 img-fluid p-1" src="%data%">';
 
 var HTMLschoolStart = '<div class="col-12 education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%</a>';
+var HTMLschoolURL = '<a class="school-text" href="%data%">';
+var HTMLschoolName = '%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<div>Major: %data%';
-var HTMLschoolDegree = ' -- %data%</div>';
+var HTMLschoolDegree = ' - %data%</div>';
 
 var HTMLonlineClasses = '<h4 class="col-12">Online Classes</h4>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = '<span class="onlineSchool"> — %data%</span></a>';
+var HTMLonlineTitle = '<div class="online-title">%data%</div>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<a class="online-school" href="%data%">';
+var HTMLonlineSchool = '%data%</a>';
 
-var googleMap = '<div id="map"></div>';
+var googleMap = '<div id="map" class="col-12"></div>';
 var map; // declares a global map variable
 
 function initializeMap() {
 
   var locations;
+  var infoWindow;
 
   var mapOptions = {
     disableDefaultUI: true
@@ -109,16 +111,16 @@ function initializeMap() {
       title: name
     });
 
+
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
-    var infoWindow = new google.maps.InfoWindow({
-      content: name
-    });
+    infoWindow = new google.maps.InfoWindow();
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.setContent(name);
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
