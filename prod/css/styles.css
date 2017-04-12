@@ -1,10 +1,32 @@
+/*
+ * MOBILE FIRST CSS
+ * Default Styles Target: Small Mobile Devices
+ *
+ * TABLE OF CONTENTS
+ * -----------------
+ * -  1:GLOBAL
+ * -  2:HEADER
+ * -  3:CONTACTS BAR
+ * -  4:WELCOME MESSAGE
+ * -  5:SKILLS AT A GLANCE
+ * -  6:WORK EXPERIENCE
+ * -  7:PROJECTS
+ * -  8:EDUCATION
+ * -  9:GOOGLE MAP
+ * - 10:FOOTER
+ *
+ * - MEDIA QUERIES
+ */
+/************************************************
+ * 1:GLOBAL STYLES
+ ************************************************/
 body {
   font-family: Lato, Arial, sans-serif;
   color: #666;
-  background: #333; }
+  background: #373737; }
 
 .page {
-  background: #eee; }
+  border: 1px solid #444; }
 
 .sect-dkGray {
   color: #888;
@@ -16,8 +38,11 @@ body {
 
 .sect-white {
   color: #888;
-  background: #eee; }
+  background: #f5f5f5; }
 
+/************************************************
+ * 1:GLOBAL STYLES
+ ************************************************/
 header {
   background: #222;
   background: linear-gradient(to bottom, #222, #333); }
@@ -101,6 +126,34 @@ header {
   font-size: 0.85rem; }
 
 #projects h3 {
+  margin: 1rem 0; }
+
+#projects {
+  padding-bottom: 1rem; }
+
+#education h3 {
+  margin: 1rem 0; }
+
+#education h4 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0; }
+
+.online-title {
+  color: #666; }
+
+.online-date, .online-school {
+  font-size: 0.85rem; }
+
+.online-school {
+  margin-bottom: 0.5rem; }
+
+#mapDiv h3 {
+  margin: 1rem 0; }
+
+#map {
+  height: 300px; }
+
+#letsConnect h3 {
   margin: 1rem 0; }
 
 footer {

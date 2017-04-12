@@ -25,25 +25,25 @@ var HTMLprojectStart = '<div class="col-12 project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p>';
-var HTMLprojectImage = '<img class="img-fluid p-1" src="%data%">';
+var HTMLprojectImage = '<img class="col-md-4 img-fluid p-1" src="%data%">';
 
 var HTMLschoolStart = '<div class="col-12 education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolName = '<a href="#">%data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<div>Major: %data%';
+var HTMLschoolDegree = ' -- %data%</div>';
 
-var HTMLonlineClasses = '<h3 class="col-12">Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = '<span class="onlineSchool"> — %data%</span></a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineClasses = '<h4 class="col-12">Online Classes</h4>';
+var HTMLonlineTitle = '<div class="online-title">%data%</div>';
+var HTMLonlineDates = '<div class="online-date">%data%</div>';
+var HTMLonlineURL = '<div class="online-school"><a href="%data%">';
+var HTMLonlineSchool = '%data%</a></div>';
 
-var googleMap = '<div id="map"></div>';
+var googleMap = '<div id="map" class="col-12></div>';
 
 var map; // declares a global map variable
-
+//
 // function initializeMap() {
 //
 //   var locations;
@@ -175,10 +175,8 @@ var map; // declares a global map variable
 //   pinPoster(locations);
 //
 // }
-//
 // // Calls the initializeMap() function when the page loads
 // window.addEventListener('load', initializeMap);
-//
 // // Vanilla JS way to listen for resizing of the window
 // // and adjust map bounds
 // window.addEventListener('resize', function(e) {
